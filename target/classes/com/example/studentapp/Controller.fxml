@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentapp.HelloController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="288.0">
+         <children>
+            <AnchorPane prefHeight="411.0" prefWidth="276.0" style="-fx-border-color: black;">
+               <children>
+                  <TextField fx:id="nameStudentTextField" layoutX="94.0" layoutY="64.0" prefHeight="25.0" prefWidth="167.0" />
+                  <TextField fx:id="phoneStudentTextField" layoutX="94.0" layoutY="147.0" prefHeight="25.0" prefWidth="167.0" />
+                  <Text layoutX="21.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="21.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="21.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthday">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="addStudent" layoutX="23.0" layoutY="225.0" mnemonicParsing="false" onAction="#add" prefHeight="103.0" prefWidth="98.0" style="-fx-background-color: lightgreen; -fx-border-color: black;">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="clearStudent" layoutX="152.0" layoutY="225.0" mnemonicParsing="false" onAction="#clear" prefHeight="103.0" prefWidth="98.0" style="-fx-background-color: red; -fx-border-color: black;">
+                     <graphic>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Clear">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </graphic>
+                  </Button>
+                  <DatePicker fx:id="birthdayStudentPicker" layoutX="94.0" layoutY="108.0" prefHeight="25.0" prefWidth="167.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <TableView fx:id="tableview" prefHeight="400.0" prefWidth="326.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="idStudentTableColumn" minWidth="-Infinity" prefWidth="83.0" text="ID" />
+          <TableColumn fx:id="nameStudentTableColumn" minWidth="-Infinity" text="Name" />
+            <TableColumn fx:id="birthdayStudentTableColumn" minWidth="-Infinity" prefWidth="83.0" text="Birthday" />
+            <TableColumn fx:id="phoneStudentTableColumn" minWidth="-Infinity" prefWidth="72.0" text="Phone" />
+        </columns>
+      </TableView>
+   </children>
+</HBox>
