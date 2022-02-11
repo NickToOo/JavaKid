@@ -31,7 +31,6 @@ public class HelloController implements Initializable {
     @FXML
     private TextField nameStudentTextField;
 
-
     @FXML
     private Button addStudent , clearStudent;
 
